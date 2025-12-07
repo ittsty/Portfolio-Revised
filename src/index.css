@@ -17,15 +17,14 @@
   --color-text: red;
 }
 
+.full-page{
+  max-height: calc(100dvh - 64px);
+}
+
 .dark {
   --color-primary: #10121A;
   --color-text: #fff;
   --color-highlight : #8190ff;
-}
-
-.navlinkActive{
-  background-color: var(--color-text);
-  color: var(--color-primary);
 }
 
 .up {
@@ -56,4 +55,9 @@
 
 .up:hover:before {
   height: 100%;
+}
+
+.navlinkActive{
+  background-color: var(--color-text);
+  color: var(--color-primary);
 }

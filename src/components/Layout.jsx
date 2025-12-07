@@ -11,9 +11,9 @@ export default function Layout() {
   };
   return (
     <div className={isDark? "dark": ""}>
-      <div className="min-h-dvh bg-primary text-text">
+      <div className="min-h-dvh h-auto  bg-primary text-text">
         <Navbar onClick={toggleTheme} />
-        <Outlet/>
+        <Outlet />
       </div>
     </div>
   );

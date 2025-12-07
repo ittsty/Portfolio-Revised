@@ -2,7 +2,7 @@ export default function ThemeToggleBtn({ onClick }) {
   return (
     <button
       onClick={onClick}
-      className="p-2 up  fill-text hover:bg-gray-50 hover:fill-primary"
+      className="p-2 up fill-text hover:bg-gray-50 hover:fill-primary"
     >
         <svg
           xmlns="http://www.w3.org/2000/svg"
