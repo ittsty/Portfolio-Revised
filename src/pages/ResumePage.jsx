@@ -1,6 +1,6 @@
 export default function ResumePage() {
     return(
-        <H1>Resume</H1>
+        <h1>Resume</h1>
     )
     
 }

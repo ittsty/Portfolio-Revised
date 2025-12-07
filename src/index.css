@@ -1,7 +1,59 @@
 @import "tailwindcss";
 
+:root {
+  font-family: monospace;
+}
+
 @layer base {
   h1 {
-    @apply text-3xl font-bold mb-4 text-gray-800;
+    @apply text-4xl font-bold;
   }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: pink;
+  --color-text: red;
+}
+
+.dark {
+  --color-primary: #10121A;
+  --color-text: #fff;
+  --color-highlight : #8190ff;
+}
+
+.navlinkActive{
+  background-color: var(--color-text);
+  color: var(--color-primary);
+}
+
+.up {
+  position: relative;
+  color:var(--color-text);
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.up:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  color:var(--color-primary);
+  background: var(--color-text);
+  transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.up:hover {
+    color:var(--color-primary);
+}
+
+.up:hover:before {
+  height: 100%;
 }

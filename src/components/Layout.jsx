@@ -1,13 +1,20 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
+import { useState } from "react";
+import ThemeToggleBtn from "./ThemeToggleBtn";
 
-export default function Layout(){
-    return(
-        <div>
-            <div>
-                <Navbar/>
-                <Outlet/>
-            </div>
-        </div>
-    )
+export default function Layout() {
+  const [isDark, setDark] = useState(false);
+  const toggleTheme = () => {
+    console.log("click");
+    setDark(!isDark);
+  };
+  return (
+    <div className={isDark? "dark": ""}>
+      <div className="min-h-dvh bg-primary text-text">
+        <Navbar onClick={toggleTheme} />
+        <Outlet/>
+      </div>
+    </div>
+  );
 }

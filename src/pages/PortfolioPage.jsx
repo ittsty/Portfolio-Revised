@@ -1,6 +1,6 @@
 export default function PortfolioPage() {
     return(
-        <H1>Port</H1>
+        <h1>Port</h1>
     )
     
 }
